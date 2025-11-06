@@ -4,10 +4,21 @@
 
 Topic Models 自诞生以来，始终在**概率统计框架**与**语义表示方法**的双重驱动下演进。大致经历了三个阶段：从最初基于混合分布假设的经典贝叶斯方法，到能够整合多维元信息的结构化模型，再到近年来依赖神经网络的范式。其理论与技术的革新反映了自然语言处理与社会科学分析文本数据的持续探索和需求。
 
-本文梳理了主题模型的发展脉络，并介绍了几个应用较为广泛的模型，重点讲解了 STM 和 BERTopic 的技术细节及其实现方式。
+## 我使用topic models做过的分析。
+
+**Beyond Economic Support: Responsibility, Emotion, and Institutions in the Elder-Care Practices of China’s Only-Child Generation**
+
+**Abstract**: As the parents of China’s only-child generation enter old age, the traditional family-based model of elder care faces unprecedented challenges. Drawing on 400,000 online discussion posts, this study employs a Structural Topic Model (STM) and qualitative content analysis to examine the lived experiences and moral reasoning behind only children’s elder-care practices. The findings reveal that the responsibility of elder care has shifted from a static intergenerational duty to a dynamic “network of responsibility” embedded in marital choices, career trajectories, and emotional negotiations. Within this network, family roles and affective ties are constantly reshaped, and filial ethics are undergoing transformation: responsibility moves from unilateral obligation to negotiated commitment; emotional expression becomes more open; and caregiving increasingly depends on social and institutional support. This emergent form of negotiated filiality reflects the adaptive reconfiguration of traditional family ethics in an individualized society. The study highlights how demographic transitions are restructuring intergenerational responsibilities and offers a new lens for understanding China’s ongoing social transformation.
+**Keywords**: eldercare of only-children; filial ethics; emotional labor; computational sociology
+
+[研究的复现材料和代码](./Replication%20Materials)也已经上传，因为数据清洗的时候数据量比较大用R太慢了，所以数据清洗in Python，模型拟合in R，数据在不同的平台转换所以代码本比较多，可以根据以下分析流程对照看每个文件。
+![分析流程图](./Replication%20Materials/readme_cn:en.png)
+
+
+
 
 ---
-
+接下来的部分主要是
 ## 1. LDA：概率主题模型的奠基之作
 
 2003 年 Blei 等人提出的 **Latent Dirichlet Allocation（LDA）** 标志着主题建模体系的真正成型。
